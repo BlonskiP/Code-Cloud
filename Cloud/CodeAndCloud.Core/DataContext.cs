@@ -11,10 +11,7 @@ namespace CodeAndCloud.Core
         public virtual DbSet<ContactModel> ContactModel { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"
-                                        Server=(localdb)\MSSQLLocalDB;
-                                        Database=CodeAndCloud;
-                                        Trusted_Connection=true;");
+            optionsBuilder.UseSqlServer(@"Server=tcp:codeandcloudwarstaty4.database.windows.net,1433;Initial Catalog=testbase;Persist Security Info=False;User ID={wilkadmin};Password={qwertyuiop!2};MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
 
         }
 

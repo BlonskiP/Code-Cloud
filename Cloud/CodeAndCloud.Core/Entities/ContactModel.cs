@@ -6,7 +6,7 @@ using System.Text;
 
 namespace CodeAndCloud.Core.Entities
 {
-    class ContactModel
+    public class ContactModel
     {
         [Key]
     public virtual long Id { get; set; }

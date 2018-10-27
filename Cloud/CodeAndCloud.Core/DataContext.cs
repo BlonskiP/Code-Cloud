@@ -6,9 +6,9 @@ using Microsoft.EntityFrameworkCore;
 
 namespace CodeAndCloud.Core
 {
-    class DataContext : DbContext
+    public class DataContext : DbContext
     {
-        public virtual DbSet<ContactModel> Contacts { get; set; }
+        public virtual DbSet<ContactModel> ContactModel { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer(@"
